@@ -10,7 +10,7 @@ public class InversionControl_1 {
 	public static void main(String args[]){
 		//Crea una factoria/contexto que utiliza archivo xml para crearse.
 		//Instancia los componentes de la aplicacion, dependiendo de necesidades del proyecto 
-		//solo sería necesario cambiar el xml
+		//solo serï¿½a necesario cambiar el xml
 		
 		
 		//Carga fichero de configuracion
@@ -18,7 +18,7 @@ public class InversionControl_1 {
 		//ClassPathResource recurso = new ClassPathResource("com/curso/Beans.xml");
 		//FileSystemResource recurso = new FileSystemResource("/ruta/directorio/Beans.xml");
 		
-		//BeanFactory Es la clase base sobre la que se asienta la inversion de control, es el interfaz báscio
+		//BeanFactory Es la clase base sobre la que se asienta la inversion de control, es el interfaz bï¿½scio
 		//BeanFactory context =  new XmlBeanFactory(recurso);
 		
 		//Cargar fichero de configuragion del cllaspath
@@ -30,11 +30,13 @@ public class InversionControl_1 {
 		
 		//ApplicationContext es una factoria avanzada que hereda de BeanFactory pero que la amplia con bastante informacion
 		//Asi como permitir integracion con frameworks de persistencia como hibernate o JPA o Web como Struts,JSF o SpringMVC
+		System.out.println("Arranco");
 		ApplicationContext context=new ClassPathXmlApplicationContext("Beans.xml");
 		
-		HelloWorld obj=(HelloWorld)context.getBean("helloWorld");
+		System.out.println("Accedo al objeto3");
+		HelloWorld obj=(HelloWorld)context.getBean("helloWorld3");
 		obj.getMessage();
-		
+
 		
 		
 	}

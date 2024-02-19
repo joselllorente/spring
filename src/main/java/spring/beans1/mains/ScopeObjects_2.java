@@ -13,25 +13,26 @@ public class ScopeObjects_2 {
 		//El objeto se mantiene durante toda la ejecucion, si lo modificas se mantendra la modificacion 
 		//Es como tener el scope como singleton (por defecto)
 //		HelloWorld objA=(HelloWorld)context.getBean("helloWorld");
-//		objA.getMessage();
+//		objA.getMessage();//Hello World!!!!!
 //		objA.setMessage("I'm object A");
-//		objA.getMessage();
+//		objA.getMessage();//I'm object A
 //		
 //		HelloWorld objB=(HelloWorld)context.getBean("helloWorld");
-//		objB.getMessage();
-//		objA.getMessage();
+//		objB.getMessage();//I'm object A
+//		objA.getMessage();//I'm object A
 		
 		System.out.println("==========================================================");
 		
 		//Si utilizamos scope prototype, el objeto se crea de nuevo cada vez que se "instancia"
 		HelloWorld objA1=(HelloWorld)context.getBean("helloWorld3");
-		objA1.getMessage();
-		objA1.setMessage("I'm object A");
-		objA1.getMessage();
+		objA1.getMessage();//Hello World3333!
+		objA1.setMessage("I'm object A1");
+		objA1.getMessage();//I'm object A1
+		objA1= null;
 		
 		//se crea una nueva instancia
 		HelloWorld objB1=(HelloWorld)context.getBean("helloWorld3");
-		objB1.getMessage();
-		objA1.getMessage();
+		objB1.getMessage();//Hello World3333!
+		objA1.getMessage();//I'm object A1
 	}
 }

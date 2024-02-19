@@ -9,7 +9,7 @@
 	</bean>
 	
 	<bean id="helloWorld3" class="spring.beans1.beans.HelloWorld" scope="prototype"> 
-		<property name="message" value="Hello World!"/>
+		<property name="message" value="Hello World3333!"/>
 	</bean>
 	
  </beans>

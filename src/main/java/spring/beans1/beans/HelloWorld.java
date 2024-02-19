@@ -8,7 +8,7 @@ public class HelloWorld implements Serializable{
 
 	public HelloWorld() {
 		System.out.println("Llamada a constructor");
-		this.message="Hello World!";
+		//this.message="Hello World!";
 	}
 
 	public String getMessage() {
