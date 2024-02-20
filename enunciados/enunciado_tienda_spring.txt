@@ -1,0 +1,40 @@
+//Parte sencilla:
+Clase Boton
+	private long id;
+	private String forma;
+	private double tamaño;
+	private String color;
+
+Pantalon 
+	private long id;
+	private double talla;
+	private String color;
+	private double precio;
+	private Boton boton;
+
+Main:
+applicationContext leyendo xml 
+obteneis el pantalon y sacais toda la información tanto la del pantalón como la del botón del pantalón
+
+
+//Parte menos sencilla:
+Clase Camisa 
+	private long id;
+	private double talla;
+	private String color;
+	private double precio;
+	private Set<Boton> botones;
+
+Maniqui 
+	private long id;
+	private Camisa camisa;
+	private Pantalon pantalon;
+
+
+Clase Tienda
+	String nombre
+	Map <String,Maniqui> maniquies
+
+x2 Maniqui
+
+Main recogeis los maniquies creados en la tienda y se muestra toda la información de cada uno de ellos

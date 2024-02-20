@@ -12,14 +12,18 @@ public class InyeccionColeeciones {
 		
 		JavaCollection jc=(JavaCollection)context.getBean("javaCollection");
 		//jc.getAddressList();
-		List addressList = jc.getAddressList();
-		for (Object address : addressList) {
-			if (address instanceof Integer){
-				System.out.println((Integer)address);
-			}else if (address instanceof String){
-				System.out.println((String)address);
-			}
+		List<String> addressList = (List<String>)jc.getAddressList();
+		for (String address : addressList) {
+			System.out.println(address);
 		}
+		
+//		for (Object address : addressList) {
+//			if (address instanceof Integer){
+//				System.out.println((Integer)address);
+//			}else if (address instanceof String){
+//				System.out.println((String)address);
+//			}
+//		}
 		jc.getAddressSet();
 		jc.getAddressMap();
 		jc.getAddressProp();

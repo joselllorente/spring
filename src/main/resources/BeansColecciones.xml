@@ -21,7 +21,7 @@
 	 <!-- results in a setAddressSet(java.util.Set) call --> 
 	 <property name="addressSet"> 
 		 <set> <!-- Lista sin duplicados -->
-			 <value>INDIA</value> 
+			 <value>INDIA</value>
 			 <value>Pakistan</value> 
 			 <value>USA</value> 
 			 <value>USA</value> 
