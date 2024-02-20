@@ -11,6 +11,7 @@
 			<ref bean="spellCheckerRef"></ref>
 		</property>
 	</bean>  -->
-	<bean id="spellCheckerRef" class="spring.inyecciondependencias.pojos.SpellChecker" />
+	<bean id="spellCheckerRef" 
+			class="spring.inyecciondependencias.pojos.SpellChecker" />
 	
  </beans> 

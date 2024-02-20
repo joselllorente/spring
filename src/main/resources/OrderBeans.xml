@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?> 
  <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
  
-<!--  	 <bean id="usuario" class="com.curso.pojos.Usuario">
-	    <constructor-arg index="1" value="35"/>
-		<constructor-arg index="0" value="Andres"/>
+<!--  	 <bean id="usuario" class="spring.inyecciondependencias.pojos.Usuario">
+		<constructor-arg value="Andres"/>
+	    <constructor-arg value="35"/>
 	</bean> -->
 	
  	<bean id="usuario" class="spring.inyecciondependencias.pojos.Usuario">

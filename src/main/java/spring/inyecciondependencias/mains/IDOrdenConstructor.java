@@ -13,7 +13,7 @@ public class IDOrdenConstructor {
 		ApplicationContext context=new ClassPathXmlApplicationContext("OrderBeans.xml");
 		
 		Usuario usu=(Usuario)context.getBean("usuario");
-		System.out.println(usu.toString());
+		System.out.println(usu);
 	}
 	
 }
