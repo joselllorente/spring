@@ -1,0 +1,36 @@
+xml bean --> nivelLog
+
+LogGetafe
+	int nivelLog; -->4
+
+	trace(msg) --> 0
+		0 >= nivelLog; 
+			sysout("trace"+msg);
+
+	debug(msg) --> 1
+		sysout("debug"+msg);
+
+	info(msg) --> 2
+		sysout("info"+msg);
+
+	warning(msg) --> 3
+		sysout("warning"+msg);
+
+	error(msg) --> 4
+		sysout("error"+msg);
+	fatal(msg) --> 5
+		sysout("fatal"+msg);
+
+
+Calculadora
+	LogGetafe log
+	int operador1;
+	int operador2;
+
+	public sumar(){
+	    log.warning("El resultado es "+(operador+operador2));
+	    log.error("El resultado es "+(operador+operador2));
+	}
+
+
+
