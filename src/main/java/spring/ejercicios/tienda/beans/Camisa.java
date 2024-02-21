@@ -1,15 +1,17 @@
 package spring.ejercicios.tienda.beans;
 
+import java.util.Set;
+
 public class Camisa {
 
 	private long id;
 	private double talla;
 	private String color;
 	private double precio;
-	private Boton[] botones;
+	private Set<Boton> botones;
 	
 	public Camisa(long id, double talla, String color, 
-			double precio, Boton[] botones) {
+			double precio, Set<Boton> botones) {
 		super();
 		this.id = id;
 		this.talla = talla;
@@ -61,12 +63,18 @@ public class Camisa {
 	}
 	
 
-	public Boton[] getBotones() {
+	public Set<Boton> getBotones() {
 		return botones;
 	}
 
-	public void setBotones(Boton[] botones) {
+	public void setBotones(Set<Boton> botones) {
 		this.botones = botones;
+	}
+
+	@Override
+	public String toString() {
+		return "Camisa [id=" + id + ", talla=" + talla + ", " + (color != null ? "color=" + color + ", " : "")
+				+ "precio=" + precio + ", " + (botones != null ? "botones=" + botones.size() : "") + "]";
 	}
 
 	

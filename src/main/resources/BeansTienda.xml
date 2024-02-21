@@ -11,6 +11,13 @@
 		<constructor-arg value="Rojo" index="3"/>
 	</bean>
 	
+	<bean id="boton2" class="spring.ejercicios.tienda.beans.Boton" scope="prototype">
+		<constructor-arg value="3" index="0"/>
+		<constructor-arg value="Redondo" index="1"/>
+		<constructor-arg value="5.5" index="2"/>
+		<constructor-arg value="Rojo" index="3"/>
+	</bean>
+	
 	<bean id="pantalon1" class="spring.ejercicios.tienda.beans.Pantalon"
 		depends-on="boton1">
 		<constructor-arg value="1" index="0"/>
@@ -20,13 +27,48 @@
 		<constructor-arg ref="boton1" index="4"/>
 	</bean>
 	
-	<bean id="pantalon2" class="spring.ejercicios.tienda.beans.Pantalon"
-		depends-on="boton1">
+	<bean id="pantalon2" class="spring.ejercicios.tienda.beans.Pantalon">
 		<constructor-arg value="2" index="0"/>
 		<constructor-arg value="42" index="1"/>
 		<constructor-arg value="vaquero" index="2"/>
 		<constructor-arg value="30" index="3"/>
-		<property name="boton" ref="boton1"></property>
+		<property name="boton" ref="boton2"></property>
+	</bean>
+	
+	<bean id="camisa" class="spring.ejercicios.tienda.beans.Camisa">
+		<constructor-arg value="2" index="0"/>
+		<constructor-arg value="38" index="1"/>
+		<constructor-arg value="negra" index="2"/>
+		<constructor-arg value="40" index="3"/>
+		<property name="botones"> 
+			 <list> <!-- Lista sin duplicados -->
+				 <ref bean="boton2"/>
+				 <ref bean="boton2"/>
+				 <ref bean="boton2"/>
+			 </list> 
+	 	</property>
+	</bean>
+	
+	<bean id="maniqui1" class="spring.ejercicios.tienda.beans.Maniqui">
+		<constructor-arg value="1" index="0"/>
+		<constructor-arg ref="camisa" index="1"/>
+		<constructor-arg ref="pantalon2" index="2"/>
+	</bean>
+	
+	<bean id="maniqui2" class="spring.ejercicios.tienda.beans.Maniqui">
+		<constructor-arg value="2" index="0"/>
+		<constructor-arg ref="camisa" index="1"/>
+		<constructor-arg ref="pantalon1" index="2"/>
+	</bean>
+	
+	<bean id="tienda" class="spring.ejercicios.tienda.beans.Tienda">
+		<constructor-arg value="Tienda1" index="0"/>
+		<property name="maniquies"> 
+		 <map> 
+			 <entry key="maniqui1" value-ref="maniqui1"/> 
+			 <entry key="maniqui2" value-ref="maniqui2"/> 
+		 </map> 
+	 </property> 
 	</bean>
 	
 	

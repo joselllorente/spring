@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+ 
+ 	<context:annotation-config />
+ 
+	<bean id="CustomerBean" class="spring.autowired.Customer">
+		<property name="action" value="buy" />
+		<property name="type" value="1" />
+	</bean>
+ 
+  	<bean id="PersonBean" class="spring.autowired.Person">
+		<property name="nombre" value="Roberto" />
+		<property name="edad" value="28" />
+	</bean>
+ 
+    <bean id="PersonBean1" class="spring.autowired.Person">
+		<property name="nombre" value="Alfredo" />
+		<property name="edad" value="57" />
+	</bean> 
+</beans>

@@ -1,14 +1,15 @@
 package spring.ejercicios.tienda.beans;
 
 public class Boton {
-
+	private static int contador;
 	private long id;
 	private String forma;
 	private double tamaño;
 	private String color;
 
 	public Boton(long id, String forma, double tamaño, String color) {
-		this.id = id;
+		System.out.println("Constructor boton" +contador);
+		this.id = contador++;
 		this.forma = forma;
 		this.tamaño = tamaño;
 		this.color = color;

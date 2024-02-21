@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
+ 
+	<bean id="lazyInit" class="spring.herencia.Element" lazy-init="true" > 
+		<property name="nombre" value="Hello World!"/>
+	</bean>
+	
+	<bean id="lazyInit2" class="spring.herencia.Element"  lazy-init="true"> 
+		<property name="nombre" value="Hola Mundo!"/>
+	</bean>
+	
+	<bean id="dependsOn" class="spring.herencia.Element"  
+			depends-on="lazyInit,lazyInit2" > 
+		<property name="nombre" value="Hello World!"/>
+	</bean>
+ </beans>
