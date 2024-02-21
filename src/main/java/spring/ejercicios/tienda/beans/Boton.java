@@ -4,14 +4,14 @@ public class Boton {
 	private static int contador;
 	private long id;
 	private String forma;
-	private double tamaño;
+	private double tamanio;
 	private String color;
 
-	public Boton(long id, String forma, double tamaño, String color) {
+	public Boton(long id, String forma, double tamanio, String color) {
 		System.out.println("Constructor boton" +contador);
 		this.id = contador++;
 		this.forma = forma;
-		this.tamaño = tamaño;
+		this.tamanio = tamanio;
 		this.color = color;
 	}
 
@@ -23,8 +23,8 @@ public class Boton {
 		return forma;
 	}
 
-	public double getTamaño() {
-		return tamaño;
+	public double getTamanio() {
+		return tamanio;
 	}
 
 	public String getColor() {
@@ -33,7 +33,7 @@ public class Boton {
 
 	@Override
 	public String toString() {
-		return "Boton [id=" + id + ", " + (forma != null ? "forma=" + forma + ", " : "") + "tamaño=" + tamaño + ", "
+		return "Boton [id=" + id + ", " + (forma != null ? "forma=" + forma + ", " : "") + "tamanio=" + tamanio + ", "
 				+ (color != null ? "color=" + color : "") + "]";
 	}
 
