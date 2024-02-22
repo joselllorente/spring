@@ -19,6 +19,14 @@ public class Student2 implements Serializable{
 		this.name="Angel";
 	}
 
+	public Student2(Integer age, String name) {
+		super();
+		this.age = age;
+		this.name = name;
+	}
+
+
+
 	public Integer getAge() {
 		return age;
 	}
