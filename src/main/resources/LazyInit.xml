@@ -9,8 +9,7 @@
 		<property name="nombre" value="Hola Mundo!"/>
 	</bean>
 	
-	<bean id="dependsOn" class="spring.herencia.Element"  
-			depends-on="lazyInit,lazyInit2" > 
-		<property name="nombre" value="Hello World!"/>
-	</bean>
+<!-- 	<bean id="dependsOn" class="spring.herencia.Element" depends-on="lazyInit,lazyInit2" >  -->
+<!-- 		<property name="nombre" value="Hello World!"/> -->
+<!-- 	</bean> -->
  </beans>

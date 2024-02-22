@@ -11,8 +11,8 @@ public class LazyInitClass {
 		
 		System.out.println("Llamando a LazyInit");
 		
-		Element objA=(Element)context.getBean("lazyInit2");
-		objA.getNombre();
+//		Element objA=(Element)context.getBean("lazyInit2");
+//		objA.getNombre();
 	}
 
 }

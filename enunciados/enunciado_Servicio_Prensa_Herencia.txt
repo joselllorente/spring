@@ -1,0 +1,36 @@
+Persona //Se crean con scope prototype
+	private LogGetafe
+
+	private ServicioPrensa servicioPrensa;
+	
+	private String nombre;
+	private String apellidos;
+	private String dni;
+	private String genero;
+	private String tipoSuscripcion;//free,basic,premium
+
+
+	solicitarLectura() 
+		servicioPrensa.mostrarPrensa(String tipoSuscripcion)
+	
+	leer(String titulo)	
+		servicioPrensa.leerPeriodico(titulo)
+	
+2 beans de los que no se pueden crear objetos
+generoFemenino value="femenino"
+generoMasculino value="masculino"
+
+
+2 beans de la clase persona
+id=p1
+
+ServicioPrensa//Se crea cuando se le necesita y tiene scope Singleton 
+	List<String> periodicos;//5-6 periodicos
+	
+	List<String> mostrarPrensa(String tipoSuscripcion)
+		Si free solo devuelve 1 periodicos
+		Si basic solo devuelve 3 periodicos
+		Si premium devuelve todos periodicos
+
+	void leerPeriodico(String periodico)
+		sysout("leyendo "+periodico)
