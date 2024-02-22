@@ -23,4 +23,8 @@ public class HelloWorld {
 	public void setMessage2(String message2) {
 		this.message2 = message2;
 	}
+	
+	public void holaHolita() {
+		System.out.println("holaHolita Metodito");
+	}
 }

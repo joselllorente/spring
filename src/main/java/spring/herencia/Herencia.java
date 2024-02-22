@@ -1,6 +1,5 @@
 package spring.herencia;
 
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -8,7 +7,7 @@ public class Herencia {
 
 	public static void main(String args[]){
 		//BeanFactory context =  new ClassPathXmlApplicationContext("Beans.xml");
-		ApplicationContext context=new ClassPathXmlApplicationContext("Beans.xml");
+		ApplicationContext context=new ClassPathXmlApplicationContext("BeansHerencia.xml");
 		
 		HelloWorld objA=(HelloWorld)context.getBean("helloWorld");
 		objA.getMessage1();
