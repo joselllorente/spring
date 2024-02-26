@@ -1,5 +1,6 @@
-package spring.ejercicios.logs;
+package spring.ejercicios.logs; 
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Component;
 @Component("LogGetafe")
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class LogGetafe {
+	@Value("2")
 	private int nivelLog;
 	
 	public LogGetafe() {
@@ -21,6 +23,7 @@ public class LogGetafe {
 	public int getNivelLog() {
 		return nivelLog;
 	}
+	
 	public void setNivelLog(int nivelLog) {
 		this.nivelLog = nivelLog;
 	}
