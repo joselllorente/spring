@@ -16,13 +16,13 @@ public class MainApp {
 		usuario.setUsuario("Juan");
 		usuario.setContrasena("root");
 		command.guardarUsuario(usuario);
-		usuario=new Usuario();
-		usuario.setUsuario("Alicia");
-		usuario.setContrasena("root");
-		command.guardarUsuario(usuario);
-		
-		usuario=command.getUsuario("Juan");
-		System.out.println("Contrase�a de "+usuario.getUsuario()+" -> "+usuario.getContrasena());
-		System.out.println("Done.");
+//		usuario=new Usuario();
+//		usuario.setUsuario("Alicia");
+//		usuario.setContrasena("root");
+//		command.guardarUsuario(usuario);
+//		
+		Usuario usuario2=command.getUsuario("Juan");
+//		System.out.println("Contrase�a de "+usuario.getUsuario()+" -> "+usuario.getContrasena());
+//		System.out.println("Done.");
 	}
 }

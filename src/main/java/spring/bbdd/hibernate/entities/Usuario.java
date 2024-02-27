@@ -5,12 +5,12 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-import org.hibernate.annotations.Table;
 
 
 @Entity
-@Table(appliesTo = "TB_USUARIOS_ANOT")
+@Table(name = "TB_USUARIOS_ANOT")
 public class Usuario implements Serializable{
 
 	private static final long serialVersionUID = 1L;

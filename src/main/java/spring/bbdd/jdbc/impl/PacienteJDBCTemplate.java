@@ -32,6 +32,7 @@ public class PacienteJDBCTemplate implements IPacienteDao {
     
     public Integer countByRoom(Integer roomId) {
     	String sql="SELECT COUNT(*) FROM T_PATIENT WHERE ROOMID=?";
+    	
     	return jdbcTemplate.queryForObject(sql, Integer.class, roomId);
     }
     
@@ -40,6 +41,7 @@ public class PacienteJDBCTemplate implements IPacienteDao {
 	}
 
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		System.out.println("setJdbcTemplate");
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
